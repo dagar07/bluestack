@@ -1,0 +1,18 @@
+.tabContainer {
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.tabHeading {
+  font-size: 18px;
+  color: #1f2740;
+  padding: 20px 16px;
+  cursor: pointer;
+}
+
+.selectedItemColor {
+  color: #84a61a;
+  border-bottom: 1px solid #84a61a;
+}

@@ -1,0 +1,116 @@
+.dashboardContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+}
+
+.dashboardTitle {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 48px;
+  color: #2b416c;
+  font-weight: 600;
+}
+
+.dashboardContainerCard {
+  background-color: #ffffff;
+  margin-top: 30px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2), 0 0 3px 0 rgba(0, 0, 0, 0.19);
+}
+
+.titleContainer {
+  flex-direction: row;
+  flex: 1;
+  padding: 14px;
+  background-color: #f1f1f4;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.dashboardContainerTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2740;
+}
+
+.valueContainer {
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  margin: 0 14px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.iconTextBox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.iconSize {
+  width: 24px;
+  height: 24px;
+}
+
+.iconText {
+  padding-left: 6px;
+  font-size: 12px;
+  color: #99a5ba;
+}
+
+.campaign {
+  flex-direction: row;
+}
+
+.campaignImg {
+  height: 40px;
+}
+
+.campignName {
+  padding-left: 6px;
+  font-size: 14px;
+  color: #637392;
+}
+
+.campaignNameBox {
+  justify-content: space-between;
+}
+
+.campaignRegion {
+  padding-left: 6px;
+  font-size: 14px;
+  color: #acb1c2;
+  font-style: italic;
+}
+
+.viewPrice {
+  cursor: pointer;
+}
+
+.dateFmt {
+  font-size: 14px;
+  color: #2b416c;
+}
+
+.dateAgo {
+  font-size: 14px;
+  color: #acb1c2;
+  font-style: italic;
+  padding-top: 3px;
+}
+
+.actions {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
