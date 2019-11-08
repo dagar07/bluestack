@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Dashboard.css';
 import DashboardValueBox from './DashboardValueBox';
-import PriceModal from './modal/PriceModal'
 
 class DashboardContainer extends React.Component {
 
@@ -19,7 +18,6 @@ class DashboardContainer extends React.Component {
         {this.props.data.map(
           (item, index) => <DashboardValueBox data={item} key={index}/>
         )}
-        <PriceModal />
       </div>
     );
   }

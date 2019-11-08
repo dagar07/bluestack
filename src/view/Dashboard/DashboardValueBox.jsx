@@ -7,12 +7,15 @@ import csv from '../../assets/images/file.png'
 import report from '../../assets/images/statistics-report.png'
 import schedule from '../../assets/images/calendar.png'
 import autoImg from '../../assets/images/Bitmap.png'
+import PriceModal from './modal/PriceModal';
 
 class DashboardValueBox extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {isOpen: false}
     this.handlePopup = this.handlePopup.bind(this);
     this.getCampaignImgUrl = this.getCampaignImgUrl.bind(this);
+    this.handlePopupClose = this.handlePopupClose.bind(this);
   }
 
   componentDidMount() {
@@ -20,7 +23,16 @@ class DashboardValueBox extends React.Component {
   }
 
   handlePopup() {
-    console.log(this.props.data);
+    this.setState({
+      isOpen: true
+    });
+  }
+
+  handlePopupClose() {
+    console.log('tilak')
+    this.setState({
+      isOpen: false
+    });
   }
 
   getCampaignImgUrl() {
@@ -54,7 +66,10 @@ class DashboardValueBox extends React.Component {
             <span className="campaignRegion">{this.props.data.region}</span>
           </div>
         </div>
-        <div className="dashboardContainerTitle flex1 viewPrice">
+        <div
+          className="dashboardContainerTitle flex1 viewPrice"
+          onClick={this.handlePopup}
+        >
           <TextIcon icon={price} text="View Price"/>
         </div>
         <div className="dashboardContainerTitle flex2 actions">
