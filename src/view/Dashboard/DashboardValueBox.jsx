@@ -23,6 +23,21 @@ class DashboardValueBox extends React.Component {
  
   }
 
+  getDaysDiff() {
+    // provide today date and return next date
+    const date1 = new Date();
+    const date2 = new Date(this.props.data.createdOn);
+    if (!(date2 - date1)) {
+      return 'Live Campaign'
+    }
+    if ((date2 - date1) < 0) {
+      return 'Past Campaigns';
+    }
+    const diffTime = Math.abs(date2 - date1);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+    return `${diffDays} days ago`;
+  }
+
   getCampaignImgUrl() {
     return autoImg;
   }
@@ -41,7 +56,7 @@ class DashboardValueBox extends React.Component {
             timeZone: 'UTC',
             timeZoneName: 'short'
           }).format(this.props.data.createdOn)}</div>
-          <span className="dateAgo">5 days ago</span>
+          <span className="dateAgo">{this.getDaysDiff()}</span>
         </div>
         <div className="dashboardContainerTitle flex2 campaign">
           <img
